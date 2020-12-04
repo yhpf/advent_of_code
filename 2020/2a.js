@@ -18,7 +18,7 @@ let counter = 0;
 for (let i = 0; i < uppdelatRad.length; i++) {  
 
 	// Split on white space
-	let uppdelatOrd = uppdelatRad[i].split(" ")
+	let uppdelatOrd = uppdelatRad[i].split(" ");
 
 	// Remove kolon from letter 
 	let keyLetter = uppdelatOrd[1][0];
@@ -27,17 +27,17 @@ for (let i = 0; i < uppdelatRad.length; i++) {
 	// FIND MIN AND MAX NUMBER OF TIMES KEY CAN APPEAR
 
 	// Seperate min and max from each other
-	let sepMinMax = uppdelatOrd[0].split("-")
+	let sepMinMax = uppdelatOrd[0].split("-");
 
 	// Set min and max
-	let minimum = sepMinMax[0]
-	let maximum = sepMinMax[1]
+	let minimum = sepMinMax[0];
+	let maximum = sepMinMax[1];
 
 
 	// EVALUATE IF THE PASSWORD IS CORRECT 
 
 	// How many times can we find key letter in password
-	let numAppear = uppdelatOrd[2].split(keyLetter).length - 1
+	let numAppear = uppdelatOrd[2].split(keyLetter).length - 1;
 
 	// Check if the number of apperence of the letter is within the span om min and max, and add to counter if password ok
 	if (numAppear >= minimum && numAppear <= maximum) {
